@@ -1,0 +1,12 @@
+    {% extends 'base.html' %}
+     
+     
+    {% block title %} Blog Archive {{testVar}} {% endblock %}
+     
+    {% block content %}
+        <form name="pastebin" method="post">
+		  <input type="text" name="title"><br>
+          <textarea id="bin" name="paste" rows="40" style="height: 70%; width: 100%;"></textarea><br />
+          <input type="submit" value="paste" />{% csrf_token %}
+        </form>
+    {% endblock %}

@@ -1,0 +1,19 @@
+    {% extends 'base.html' %}
+     
+    {% block title %}{{paste.title}}{% endblock %}
+     
+    {% block content %}
+    <article>
+        <header>
+            <h1> {{paste.title}} </h1>
+            <p>
+                Posted on
+                <time datetime="{{paste.created|date:"c"}}">
+                {{paste.created|date}}
+                </time>
+            </p>
+        </header>
+        
+        {{paste.content|safe}}
+    </article>
+    {% endblock %}
