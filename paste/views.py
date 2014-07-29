@@ -10,9 +10,11 @@ def main(request):
 	title = request.POST.get('title', -1)
 	if (posted != -1) and (title != -1):
 		randString = random_generator()
+		while Paste.objects.filter(url=randString).count() > 0:
+			randString = random_generator()
+		
 		p = Paste(title=title,url=randString,content=posted)
 		p.save()
-		#return render(request, 'paste/paste.html', {'paste':p},context_instance=RequestContext(request))
 		return redirect('/'+ randString)
 	else:
 		return render(request, 'paste/index.html')
