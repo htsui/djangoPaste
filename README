@@ -1,0 +1,2 @@
+A minimal PasteBin clone written in Django.
+Folder structure is as described in this deployment tutorial: http://www.lennu.net/2012/05/14/django-deployement-installation-to-ubuntu-12-dot-04-server/
