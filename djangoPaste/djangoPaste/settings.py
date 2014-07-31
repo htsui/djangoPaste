@@ -52,7 +52,7 @@ ROOT_URLCONF = 'djangoPaste.urls'
 
 WSGI_APPLICATION = 'djangoPaste.wsgi.application'
 TEMPLATE_DIRS = (
-	'C:/Howin/2014Dev/python/djangoPaste/djangoPaste/templates',
+	'/srv/my_project/app/templates',
 )
 
 # Database

@@ -1,0 +1,13 @@
+    {% extends 'base.html' %}
+     
+     
+    {% block title %} Django Paste {% endblock %}
+     
+    {% block content %}
+	<h1>Django-Paste</h1>
+        <form name="pastebin" method="post">
+		  Title<br><input type="text" name="title"><br>
+          Content<br><textarea id="bin" name="paste" rows="40" style="height: 70%; width: 80%;"></textarea><br />
+          <input type="submit" value="paste" />{% csrf_token %}
+        </form>
+    {% endblock %}

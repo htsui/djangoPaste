@@ -5,15 +5,17 @@
     {% block content %}
     <article>
         <header>
-            <h1> {{paste.title}} </h1>
-            <p>
+            <h1> {{paste.title|safe}} </h1>
+            <font size = "1">
                 Posted on
-                <time datetime="{{paste.created|date:"c"}}">
+                <time datetime="{{paste.created|date:'c'}}">
                 {{paste.created|date}}
                 </time>
-            </p>
+            </font>
         </header>
         
         {{paste.content|safe}}
+		<br><br>
+		<a href = "http://django.justbuild.pw">Make a new Paste</a>
     </article>
     {% endblock %}
